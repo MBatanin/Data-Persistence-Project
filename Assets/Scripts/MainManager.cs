@@ -16,7 +16,7 @@ public class MainManager : MonoBehaviour
     public GameObject GameOverText;
     
     private bool m_Started = false;
-    private int m_Points;
+    private int m_Points = 0;
     
     private bool m_GameOver = false;
 
@@ -29,8 +29,9 @@ public class MainManager : MonoBehaviour
         const float step = 0.6f;
         int perLine = Mathf.FloorToInt(4.0f / step);
         GameOverText.GetComponentInChildren<Text>().text = DataString.tGameOver;
-        ScoreTextName.text = $"Best Score for {DataString.playerName} is {bestScore}";
-
+        ScoreTextName.text = $"Best Score for {DataString.playerName} is {DataString.countBestScore}";
+        
+        
         int[] pointCountArray = new [] {1,1,2,2,5,5};
         for (int i = 0; i < LineCount; ++i)
         {

@@ -9,7 +9,8 @@ public class MenuUIManager : MonoBehaviour
     // Start is called before the first frame update
     public Text tBestScore;
     public InputField ifName;
-    public Button bStart, bQuit;
+    public Button bStart, bQuit, bHighScores, bSettings;
+
 
 
     void Start()
@@ -18,6 +19,8 @@ public class MenuUIManager : MonoBehaviour
         ifName.GetComponentInChildren<Text>().text = DataString.plcaHolder;
         bStart.GetComponentInChildren<Text>().text = DataString.bStart;
         bQuit.GetComponentInChildren<Text>().text = DataString.bQuit;
+        bHighScores.GetComponentInChildren<Text>().text = DataString.bHighScores;
+        bSettings.GetComponentInChildren<Text>().text = DataString.bSettings;
     }
 
     // Update is called once per frame
@@ -30,6 +33,13 @@ public class MenuUIManager : MonoBehaviour
     {
         DataString.playerName = ifName.text;
         SceneManager.LoadScene(DataString.sMainScene);
+    }
+    public void onClickHighScores()
+    {
+        SceneManager.LoadScene(DataString.sHighScores);
+    }
+    public void onClickSettings() {
+        SceneManager.LoadScene(DataString.sSettings);
     }
     public void onClickQuit()
     {
