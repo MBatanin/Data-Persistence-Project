@@ -21,6 +21,7 @@ public class MenuUIManager : MonoBehaviour
         bQuit.GetComponentInChildren<Text>().text = DataString.bQuit;
         bHighScores.GetComponentInChildren<Text>().text = DataString.bHighScores;
         bSettings.GetComponentInChildren<Text>().text = DataString.bSettings;
+        //Debug.Log(GamerScore.);
     }
 
     // Update is called once per frame

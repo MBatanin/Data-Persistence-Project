@@ -12,10 +12,19 @@ public class populatedScript : MonoBehaviour
 
     void Start()
     {
-        GamerScore.nome = "Jose";
-        GamerScore.score = 123;
-        GameObject obj = Instantiate(pNameScore,content.transform);
-        
+        GameObject go = content;
+        foreach (PlayerData playerData in GamerScore.getInstance().playerData)
+        {
+           
+            GamerScore.getInstance().nome =playerData.Name;
+            GamerScore.getInstance().score = playerData.score;
+
+            go.transform.position = new Vector3(content.transform.position.x, go.transform.position.y-30, content.transform.position.z);
+            //GameObject obj = Instantiate(pNameScore, content.transform);
+            GameObject obj = Instantiate(pNameScore, go.transform);
+            
+            //Debug.Log(obj.GetComponents<RectTransform>().GetValue(0));
+        }
         
     }
 

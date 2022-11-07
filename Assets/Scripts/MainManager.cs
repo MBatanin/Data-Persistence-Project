@@ -12,6 +12,7 @@ public class MainManager : MonoBehaviour
 
     public Text ScoreText;
     public Text ScoreTextName;
+    public Button bBackMenu;
     
     public GameObject GameOverText;
     
@@ -30,7 +31,7 @@ public class MainManager : MonoBehaviour
         int perLine = Mathf.FloorToInt(4.0f / step);
         GameOverText.GetComponentInChildren<Text>().text = DataString.tGameOver;
         ScoreTextName.text = $"Best Score for {DataString.playerName} is {DataString.countBestScore}";
-        
+        bBackMenu.GetComponentInChildren<Text>().text = DataString.bBackMenu;
         
         int[] pointCountArray = new [] {1,1,2,2,5,5};
         for (int i = 0; i < LineCount; ++i)
@@ -85,5 +86,11 @@ public class MainManager : MonoBehaviour
         }
         m_GameOver = true;
         GameOverText.SetActive(true);
+    }
+
+    public void bBackMenuPressed() {
+
+        SceneManager.LoadScene(DataString.sMenu);
+
     }
 }

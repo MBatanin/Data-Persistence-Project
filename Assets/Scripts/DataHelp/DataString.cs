@@ -8,6 +8,7 @@ public class DataString : MonoBehaviour
     public static string sMainScene = "main";
     public static string sHighScores = "highScores";
     public static string sSettings = "settings";
+    public static string sMenu = "menu";
     public static List<GamerScore> listScore;
     public static string playerName;
     public static int countBestScore = 0;
@@ -23,6 +24,7 @@ public class DataString : MonoBehaviour
     public static string tHighScores = "Hall of Fame";
     public static string bHighScores = "High Scores";
     public static string bSettings = "Settings";
+    public static string bBackMenu = "Back Menu";
 
     //pt-br
 

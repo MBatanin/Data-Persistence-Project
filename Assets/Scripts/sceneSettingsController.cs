@@ -3,26 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 
-public class highScoresController : MonoBehaviour
+public class sceneSettingsController : MonoBehaviour
 {
+    public Button bBackMenu;
     // Start is called before the first frame update
-    public Text tHihgScores;
-    public GameObject pNameScore;
-    public ScrollView svScore;
-    public UnityEngine.UI.Button bBackMenu;
-
-
-    public void Start()
+    void Start()
     {
         bBackMenu.GetComponentInChildren<Text>().text = DataString.bBackMenu;
 
-        tHihgScores.text = DataString.tHighScores;
+    }
 
-        //var pane1 = Instantiate(pNameScore, transform);
-
-
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
     public void bBackMenuPressed()
     {

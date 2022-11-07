@@ -13,8 +13,12 @@ public class controllerPaneNameScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tName.text = GamerScore.nome;
-        tScore.text = Convert.ToString(GamerScore.score);
+        tName.text = GamerScore.getInstance().nome;
+        tScore.text = Convert.ToString(GamerScore.getInstance().score);
+        
+
+        //PlayerData playerData = new PlayerData();
+        
     }
 
     
